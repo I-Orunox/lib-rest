@@ -10,7 +10,9 @@ import (
 var Secret = []byte("your-secret-key")
 
 type Claims struct {
-	UserID uint `json:"user_id"`
+	UserID  uint   `json:"id"`
+	Email   string `json:"email"`
+	StoreID uint   `json:"storeId"`
 	jwt.RegisteredClaims
 }
 

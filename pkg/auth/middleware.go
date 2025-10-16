@@ -30,7 +30,9 @@ func JWTMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		c.Set("user_id", claims.UserID)
+		c.Set("userId", claims.UserID)
+		c.Set("email", claims.Email)
+		c.Set("storeId", claims.StoreID)
 
 		c.Next()
 	}
